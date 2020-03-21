@@ -20,4 +20,11 @@ export class TaoluService {
     findAll() {
         return this.taoluRepository.find();
     }
+
+
+
+    insert(name: string) {
+        const entity = new Taolu(name);
+        return this.taoluRepository.insert(entity);
+    }
 }
