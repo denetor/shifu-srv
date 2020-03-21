@@ -19,4 +19,6 @@ import { Taolu } from './taolu/taolu.entity';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+    constructor(private connection: Connection) {};
+}
