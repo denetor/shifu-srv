@@ -4,10 +4,26 @@
 
 Creazione
 ```
-curl -d '{"name":"Xiao Fan Che"}' -H "Content-Type: application/json" -X POST http://localhost:3000/taolu
+curl -X POST -d '{"name":"asdasdasdasas"}' -H "Content-Type: application/json" http://localhost:3000/taolu
 ```
+
+Update
+```
+curl -X PATCH -d '{"instance": {"name":"Ji Ben Taolu"}}' -H "Content-Type: application/json" http://localhost:3000/taolu/1
+```
+
+Delete
+```
+curl -X DELETE http://localhost:3000/taolu/3
+```
+
 
 Elenco
 ```
 curl http://localhost:3000/taolu 
+```
+
+Get elemento
+```
+curl http://localhost:3000/taolu/1 
 ```

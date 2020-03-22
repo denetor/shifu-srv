@@ -5,8 +5,6 @@ import { Taolu } from './taolu.entity';
 
 @Injectable()
 export class TaoluService {
-
-
     private taolu: Taolu[] = [];
 
 
@@ -16,15 +14,28 @@ export class TaoluService {
     ) {}
 
 
-
     findAll() {
         return this.taoluRepository.find();
     }
 
 
+    findOne(id: number) {
+        return this.taoluRepository.findOne(id);
+    }
+
 
     insert(name: string) {
         const entity = new Taolu(name);
         return this.taoluRepository.insert(entity);
+    }
+
+
+    update(id: number, instance: object) {
+        return this.taoluRepository.update(id, instance);
+    }
+
+
+    delete(id: number) {
+        return this.taoluRepository.delete(id);
     }
 }
