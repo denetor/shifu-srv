@@ -1,4 +1,17 @@
+## TODO
+- [ ] Sposta /auth/login da app.controller in auth.xontroller
+- [ ] Fare entity User e usarla per la login con diversa strategy
+
+
 ## Esempi
+
+
+### User
+Login:
+```
+curl -X POST http://localhost:3000/auth/login -d '{"username": "john", "password": "changeme"}' -H "Content-Type: application/json"
+```
+
 
 ### Taolu
 

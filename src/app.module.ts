@@ -5,6 +5,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TaoluModule } from "./taolu/taolu.module";
 import { Taolu } from './taolu/taolu.entity';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -14,7 +16,9 @@ import { Taolu } from './taolu/taolu.entity';
           entities: [ Taolu ],
           logging: true
       }),
-      TaoluModule
+      TaoluModule,
+      AuthModule,
+      UsersModule
   ],
   controllers: [AppController],
   providers: [AppService],
