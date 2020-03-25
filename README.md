@@ -13,6 +13,19 @@ curl -X POST http://localhost:3000/auth/login -d '{"username": "john", "password
 ```
 
 
+### Autenticazione
+```
+curl http://localhost:3000/profile
+{"statusCode":401,"error":"Unauthorized"}
+
+curl -X POST http://localhost:3000/auth/login -d '{"username": "john", "password": "changeme"}' -H "Content-Type: application/json"
+{"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOjEsImlhdCI6MTU4NTA5NDMyMywiZXhwIjoxNTg1MDk0OTIzfQ.-6o4r2trgtdTYtZus-9z_8rIb1I3UXIv_8glfInNxb8"}
+
+curl http://localhost:3000/profile -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOjEsImlhdCI6MTU4NTA5NDMyMywiZXhwIjoxNTg1MDk0OTIzfQ.-6o4r2trgtdTYtZus-9z_8rIb1I3UXIv_8glfInNxb8"
+{"userId":1,"username":"john"}
+```
+
+
 ### Taolu
 
 Creazione
