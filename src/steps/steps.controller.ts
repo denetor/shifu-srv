@@ -1,18 +1,16 @@
 import { Controller, Get, Post, Patch, Delete, Body, Param } from '@nestjs/common';
-import { TaoluService } from './taolu.service';
+import { StepsService } from './steps.service';
 
-@Controller('taolu')
-export class TaoluController {
-
-
-    constructor(private readonly taoluService: TaoluService) {
+@Controller('steps')
+export class StepsController {
+    constructor(private readonly stepsService: StepsService) {
 
     }
 
 
     @Get()
     findAll() {
-        return this.taoluService.findAll();
+        return this.stepsService.findAll();
     }
 
 
@@ -20,15 +18,15 @@ export class TaoluController {
     findOne(
         @Param('id') id: number,
     ) {
-        return this.taoluService.findOne(id);
+        return this.stepsService.findOne(id);
     }
 
 
     @Post()
     insert(
-        @Body('name') name: string,
+        @Body('sortOrder') sortOrder: number,
     ): any {
-        return this.taoluService.insert(name);
+        return this.stepsService.insert(sortOrder);
     }
 
 
@@ -37,7 +35,7 @@ export class TaoluController {
         @Param('id') id: number,
         @Body('instance') instance: object,
     ): any {
-        return this.taoluService.update(id, instance);
+        return this.stepsService.update(id, instance);
     }
 
 
@@ -45,7 +43,7 @@ export class TaoluController {
     deleteById(
         @Param('id') id: number
     ): any {
-        return this.taoluService.delete(id);
+        return this.stepsService.delete(id);
     }
 
 

@@ -5,9 +5,6 @@ import { Taolu } from './taolu.entity';
 
 @Injectable()
 export class TaoluService {
-    private taolu: Taolu[] = [];
-
-
     constructor(
         @InjectRepository(Taolu)
         private taoluRepository: Repository<Taolu>,

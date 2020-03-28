@@ -22,6 +22,12 @@
 - [ ] Fare player Taolu
 
 
+## DB
+```
+CREATE TABLE `product` ( `id` INTEGER, `title` TEXT, `description` TEXT, `price` NUMERIC, PRIMARY KEY(`id`) )
+CREATE TABLE `step` ( `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, `sortOrder` INTEGER )
+```
+
 
 ## Esempi
 
@@ -50,7 +56,7 @@ curl http://localhost:3000/users -H "Authorization: Bearer "eyJhbGciOiJIUzI1NiIs
 
 ### Taolu
 
-Creazione
+Insert
 ```
 curl -X POST -d '{"name":"asdasdasdasas"}' -H "Content-Type: application/json" http://localhost:3000/taolu
 ```
@@ -75,3 +81,15 @@ Get elemento
 ```
 curl http://localhost:3000/taolu/1 
 ```
+
+### Step
+Elenco
+```
+curl http://localhost:3000/steps 
+```
+
+Insert
+```
+curl -X POST -d '{"sortOrder": 1}' -H "Content-Type: application/json" http://localhost:3000/steps
+```
+
