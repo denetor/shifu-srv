@@ -5,6 +5,7 @@
 - [ ] Proteggere entità User con login
 - [ ] Fare entità Step con relazione 1-N a Taolu
 - [ ] Fare entità Element con relazione N-N con Step
+
 ###Client
 - [ ] Fare base applicazione
 - [ ] Fare CRUD Taolu
@@ -12,6 +13,7 @@
 - [ ] Fare CRUD User, accessibile dopo autenticazione
 - [ ] Fare dettaglio Taolu con CRUD di Step
 - [ ] Fare dettaglio Step con selezione e CRUD Elements
+
 ###App
 - [ ] Fare base applicazione
 - [ ] Fare elenco Taolu
