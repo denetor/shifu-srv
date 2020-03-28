@@ -6,7 +6,7 @@
 - [ ] Fare entità Step con relazione 1-N a Taolu
 - [ ] Fare entità Element con relazione N-N con Step
 
-###Client
+### Client
 - [ ] Fare base applicazione
 - [ ] Fare CRUD Taolu
 - [ ] Fare login
@@ -14,7 +14,7 @@
 - [ ] Fare dettaglio Taolu con CRUD di Step
 - [ ] Fare dettaglio Step con selezione e CRUD Elements
 
-###App
+### App
 - [ ] Fare base applicazione
 - [ ] Fare elenco Taolu
 - [ ] Fare login
