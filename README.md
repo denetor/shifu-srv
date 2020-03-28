@@ -1,6 +1,24 @@
 ## TODO
-- [ ] Sposta /auth/login da app.controller in auth.xontroller
-- [ ] Fare entity User e usarla per la login con diversa strategy
+### Server
+- [ ] Sposta /auth/login da app.controller in auth.controller
+- [x] Fare entity User e usarla per la login con diversa strategy
+- [ ] Proteggere entità User con login
+- [ ] Fare entità Step con relazione 1-N a Taolu
+- [ ] Fare entità Element con relazione N-N con Step
+###Client
+- [ ] Fare base applicazione
+- [ ] Fare CRUD Taolu
+- [ ] Fare login
+- [ ] Fare CRUD User, accessibile dopo autenticazione
+- [ ] Fare dettaglio Taolu con CRUD di Step
+- [ ] Fare dettaglio Step con selezione e CRUD Elements
+###App
+- [ ] Fare base applicazione
+- [ ] Fare elenco Taolu
+- [ ] Fare login
+- [ ] Fare elenco User, per testare rotte protette da login
+- [ ] Fare player Taolu
+
 
 
 ## Esempi
