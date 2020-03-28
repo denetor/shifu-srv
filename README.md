@@ -2,7 +2,7 @@
 ### Server
 - [ ] Sposta /auth/login da app.controller in auth.controller
 - [x] Fare entity User e usarla per la login con diversa strategy
-- [ ] Proteggere entità User con login
+- [x] Proteggere entità User con login
 - [ ] Fare entità Step con relazione 1-N a Taolu
 - [ ] Fare entità Element con relazione N-N con Step
 
@@ -43,6 +43,8 @@ curl -X POST http://localhost:3000/auth/login -d '{"username": "john", "password
 
 curl http://localhost:3000/profile -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOjEsImlhdCI6MTU4NTA5NDMyMywiZXhwIjoxNTg1MDk0OTIzfQ.-6o4r2trgtdTYtZus-9z_8rIb1I3UXIv_8glfInNxb8"
 {"userId":1,"username":"john"}
+
+curl http://localhost:3000/users -H "Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOjEsImlhdCI6MTU4NTQwNDUzNiwiZXhwIjoxNTg1NDA1MTM2fQ.c-k8D1vT5oB8gpKDV544xO_Jq9hlbLeqWyZgpGc01J8"
 ```
 
 
