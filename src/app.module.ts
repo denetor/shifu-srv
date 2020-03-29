@@ -6,22 +6,25 @@ import { AppService } from './app.service';
 import { TaoluModule } from "./taolu/taolu.module";
 import { Taolu } from './taolu/taolu.entity';
 import { Step } from './steps/step.entity';
+import { Element } from './elements/element.entity';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { StepsModule } from './steps/steps.module';
+import { ElementsModule } from './elements/elements.module';
 
 @Module({
   imports: [
       TypeOrmModule.forRoot({
           type: 'sqlite',
           database: 'data/db.sqlite',
-          entities: [ Taolu, Step ],
+          entities: [ Taolu, Step, Element ],
           logging: true
       }),
       TaoluModule,
       AuthModule,
       UsersModule,
-      StepsModule
+      StepsModule,
+      ElementsModule
   ],
   controllers: [AppController],
   providers: [AppService],

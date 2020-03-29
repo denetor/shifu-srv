@@ -5,6 +5,7 @@
 - [x] Proteggere entità User con login
 - [x] Fare entità Step con relazione 1-N a Taolu
 - [ ] Fare entità Element con relazione N-N con Step
+- [ ] Provare una query con elemento padre-figlio, filtrando per un campo dell'elemento figlio (es. tutte le Taolu, con Step aventi sortOrder > 2)
 
 ### Client
 - [ ] Fare base applicazione
@@ -21,6 +22,12 @@
 - [ ] Fare elenco User, per testare rotte protette da login
 - [ ] Fare player Taolu
 
+## DB Structure
+- Taolu: an exercise
+- Step: the steps composing a Taolu
+- Element: the single elements composing a step. It's the upper body position or the lower body position. Basic elements are reused in many steps of many Taolus
+
+
 
 ## Migrations
 ```
@@ -32,6 +39,15 @@ CREATE TABLE `step` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`sortOrder`	INTEGER,
 	`taoluId`	INTEGER
+);
+CREATE TABLE `element` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT,
+	`chineseName`	TEXT,
+	`description`	TEXT,
+	`notes`	TEXT,
+	`image`	TEXT,
+	`sound`	TEXT
 );
 ```
 
