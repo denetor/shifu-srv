@@ -25,8 +25,9 @@ export class StepsController {
     @Post()
     insert(
         @Body('sortOrder') sortOrder: number,
+        @Body('taoluID') taoluId: number,
     ): any {
-        return this.stepsService.insert(sortOrder);
+        return this.stepsService.insert(sortOrder, taoluId);
     }
 
 

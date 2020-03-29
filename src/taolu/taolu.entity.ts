@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { Step } from '../steps/step.entity';
 
 @Entity()
 export class Taolu {
@@ -11,4 +12,7 @@ export class Taolu {
     constructor(name: string) {
         this.name = name;
     };
+
+    @OneToMany(type => Step, step => step.taoluId)
+    steps: Step[];
 }

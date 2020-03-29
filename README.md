@@ -3,7 +3,7 @@
 - [x] Sposta /auth/login da app.controller in auth.controller
 - [x] Fare entity User e usarla per la login con diversa strategy
 - [x] Proteggere entità User con login
-- [ ] Fare entità Step con relazione 1-N a Taolu
+- [x] Fare entità Step con relazione 1-N a Taolu
 - [ ] Fare entità Element con relazione N-N con Step
 
 ### Client
@@ -22,10 +22,17 @@
 - [ ] Fare player Taolu
 
 
-## DB
+## Migrations
 ```
-CREATE TABLE `product` ( `id` INTEGER, `title` TEXT, `description` TEXT, `price` NUMERIC, PRIMARY KEY(`id`) )
-CREATE TABLE `step` ( `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, `sortOrder` INTEGER )
+CREATE TABLE `taolu` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`name`	TEXT
+);
+CREATE TABLE `step` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`sortOrder`	INTEGER,
+	`taoluId`	INTEGER
+);
 ```
 
 
@@ -90,6 +97,5 @@ curl http://localhost:3000/steps
 
 Insert
 ```
-curl -X POST -d '{"sortOrder": 1}' -H "Content-Type: application/json" http://localhost:3000/steps
+curl -X POST -d '{"sortOrder": 1, "taoluId": 1}' -H "Content-Type: application/json" http://localhost:3000/steps
 ```
-

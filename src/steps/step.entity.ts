@@ -8,7 +8,12 @@ export class Step {
     @Column()
     sortOrder: number;
 
-    constructor(sortOrder: number) {
+    @Column()
+    taoluId: number;
+
+
+    constructor(sortOrder: number, taoluId: number) {
         this.sortOrder = sortOrder;
+        this.taoluId = taoluId;
     };
 }

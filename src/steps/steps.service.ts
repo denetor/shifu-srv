@@ -21,8 +21,8 @@ export class StepsService {
     }
 
 
-    insert(sortOrder: number) {
-        const entity = new Step(sortOrder);
+    insert(sortOrder: number, taoluId: number) {
+        const entity = new Step(sortOrder, taoluId);
         return this.stepsRepository.insert(entity);
     }
 
