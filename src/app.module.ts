@@ -17,7 +17,7 @@ import { ElementsModule } from './elements/elements.module';
       TypeOrmModule.forRoot({
           type: 'sqlite',
           database: 'data/db.sqlite',
-          entities: [ Taolu, Step, Element ],
+          autoLoadEntities: true,
           logging: true
       }),
       TaoluModule,
