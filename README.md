@@ -49,6 +49,7 @@ CREATE TABLE `element` (
 	`image`	TEXT,
 	`sound`	TEXT
 );
+CREATE TABLE `step_has_elements` ( `stepId` INTEGER, `elementId` INTEGER );
 ```
 
 
@@ -93,7 +94,6 @@ Delete
 ```
 curl -X DELETE http://localhost:3000/taolu/3
 ```
-
 
 Elenco
 ```

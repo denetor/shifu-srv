@@ -9,10 +9,11 @@ export class Taolu {
     @Column()
     name: string;
 
+    @OneToMany(type => Step, step => step.taolu, { cascade: true })
+    steps: Step[];
+
     constructor(name: string) {
         this.name = name;
     };
 
-    @OneToMany(type => Step, step => step.taoluId)
-    steps: Step[];
 }

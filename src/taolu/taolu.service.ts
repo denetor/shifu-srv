@@ -17,7 +17,7 @@ export class TaoluService {
 
 
     findOne(id: number) {
-        return this.taoluRepository.findOne(id);
+        return this.taoluRepository.findOne(id, {relations: ['steps']});
     }
 
 
