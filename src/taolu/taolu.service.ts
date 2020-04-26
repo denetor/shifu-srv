@@ -17,7 +17,15 @@ export class TaoluService {
 
 
     findOne(id: number) {
-        return this.taoluRepository.findOne(id, {relations: ['steps']});
+        // con repository
+        // return this.taoluRepository.findOne(id, {relations: ['steps']});
+
+        // con typeorm query builder
+        return this.taoluRepository
+            .createQueryBuilder('taolu')
+            .leftJoinAndSelect('taolu.steps', 'step')
+            .where('taolu.id = :id', {id: id})
+            .getOne();
     }
 
 
