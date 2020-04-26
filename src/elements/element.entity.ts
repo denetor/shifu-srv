@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToMany, JoinTable } from 'typeorm';
+import { Step } from '../steps/step.entity';
 
 @Entity()
 export class Element {
@@ -22,6 +23,14 @@ export class Element {
 
     @Column()
     sound: string;
+
+    @ManyToMany(type => Step)
+    @JoinTable({
+        name: 'step_has_elements',
+        joinColumn: { name: 'stepId', referencedColumnName: 'id'},
+        inverseJoinColumn: { name: 'elementId', referencedColumnName: 'id'},
+    })
+    steps: Step[];
 
 
     constructor(entity) {

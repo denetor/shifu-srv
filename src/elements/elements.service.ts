@@ -17,7 +17,7 @@ export class ElementsService {
 
 
     findOne(id: number) {
-        return this.entitiesRepository.findOne(id);
+        return this.entitiesRepository.findOne(id, { relations: ['steps']});
     }
 
 

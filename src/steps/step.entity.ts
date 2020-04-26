@@ -19,13 +19,13 @@ export class Step {
 
 
 
-    // @ManyToMany(type => Element, { cascade: true })
-    // @JoinTable({
-    //     name: 'step_has_elements',
-    //     joinColumn: { name: 'stepId', referencedColumnName: 'id'},
-    //     inverseJoinColumn: { name: 'elementId', referencedColumnName: 'id'},
-    // })
-    // elements: Element[];
+    @ManyToMany(type => Element, { cascade: true })
+    @JoinTable({
+        name: 'step_has_elements',
+        joinColumn: { name: 'stepId', referencedColumnName: 'id'},
+        inverseJoinColumn: { name: 'elementId', referencedColumnName: 'id'},
+    })
+    elements: Element[];
 
 
 

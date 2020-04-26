@@ -17,7 +17,7 @@ export class StepsService {
 
 
     findOne(id: number) {
-        return this.stepsRepository.findOne(id);
+        return this.stepsRepository.findOne(id, { relations: ['elements']});
     }
 
 
