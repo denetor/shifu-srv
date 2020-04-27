@@ -5,7 +5,7 @@
 - [x] Proteggere entità User con login
 - [x] Fare entità Step con relazione 1-N a Taolu
 - [x] Fare entità Element con relazione N-N con Step
-- [ ] Provare una query con elemento padre-figlio, filtrando per un campo dell'elemento figlio (es. tutte le Taolu, con Step aventi sortOrder > 2)
+- [x] Provare una query con elemento padre-figlio, filtrando per un campo dell'elemento figlio (es. tutte le Taolu, con Step aventi sortOrder > 2)
 
 ### Client
 - [ ] Fare base applicazione

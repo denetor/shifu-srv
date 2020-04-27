@@ -29,6 +29,15 @@ export class TaoluService {
     }
 
 
+    findAllByStepId(stepId: number) {
+        return this.taoluRepository
+            .createQueryBuilder('taolu')
+            .leftJoinAndSelect('taolu.steps', 'step')
+            .where('step.id = :id', {id: stepId})
+            .getMany();
+    }
+
+
     insert(name: string) {
         const entity = new Taolu(name);
         return this.taoluRepository.insert(entity);

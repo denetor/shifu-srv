@@ -49,4 +49,12 @@ export class TaoluController {
     }
 
 
+    @Get('bystep/:stepId')
+    findAllByStepId(
+        @Param('stepId') stepId: number,
+    ) {
+        return this.taoluService.findAllByStepId(stepId);
+    }
+
+
 }
