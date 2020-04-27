@@ -52,6 +52,9 @@ CREATE TABLE `element` (
 CREATE TABLE `step_has_elements` ( `stepId` INTEGER, `elementId` INTEGER );
 ```
 
+## Swagger
+Navigare le API all'URL http://localhost:3000/api
+
 
 ## Esempi
 
